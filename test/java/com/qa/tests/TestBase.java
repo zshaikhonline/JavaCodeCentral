@@ -2,7 +2,9 @@ package com.qa.tests;
 
 import org.testng.annotations.Test;
 
-public class TestBase {
+import com.qa.main.mainBase;
+
+public class TestBase extends mainBase {
 	
 	@Test(priority=1)
 	public void firstTestcase() {
