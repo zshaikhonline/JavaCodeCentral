@@ -1,7 +1,10 @@
 package com.qa.main;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+
 
 public class mainBase {
 	
@@ -11,19 +14,23 @@ public class mainBase {
 	mainBase mb;
 	
 	@BeforeMethod
-	public void initializations() {
+	public void fnbeforeMethod() {
 		
-		
+		System.out.println("This is before method");
 	}
 	
-	@Test
-	public String stringy() {
+	public String fnStringy() {
 		mainBase mb = new mainBase();
 		
-		mb.initializations();
+		mb.fnbeforeMethod();
 		str = "Zeeshan SHaikh";
 		return str;
 		
+	}
+	
+	@AfterMethod
+	public void fnAfterMethod() {
+		System.out.println("This is after Method");
 	}
 
 }

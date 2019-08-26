@@ -26,4 +26,9 @@ public class TestBase extends mainBase {
 		System.out.println("Multiplication of " +a + " and " +b+ " is " + mulres);
 	}
 
+	@Test
+	public void test003(){
+		System.out.println("test");
+	}
+
 }
